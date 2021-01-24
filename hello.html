@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+
+            margin:0;
+            padding:0;
+            background-color:#232323;
+            font-family: sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            display: none;
+        }
+        .greetings{
+            display:none;
+        }
+        .showing{
+            margin-left:40%;
+            padding-bottom:2%;
+            width:20%;
+            display: flex; justify-content: center; align-items: center; font-size:4vh;
+            animation:fadeIn 0.5s linear;
+            color:white;
+            border-bottom: solid 1px;
+            -webkit-text-stroke: 1.2px black;
+            
+        }
+        ul{
+            list-style: none;
+            color:white;
+        }
+        li{
+            display: flex; justify-content: center; align-items: center;
+        }
+        .bgImage{
+            position: absolute;
+            top:0;
+            width:100%;
+            left:0;
+            height:100%;
+            z-index:-100;
+            animation:fadeIn 0.5s linear;
+        }
+        .js-clock{
+            color:white;
+            display:block;
+        }
+        
+        @keyframes fadeIn{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        h1{
+            font-size:13vh;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .container{
+            display: flex; justify-content: center; align-items: center;
+        }
+        .container input{
+            background-color: transparent;
+            border-bottom: 1px solid;
+            box-shadow:none;
+            height: 20px;
+            width: 160px;
+            color:white;
+        }
+        .container input::placeholder{
+            color:white;
+            font-style:italic;
+            text-align: center;
+        }
+        .js-toDoList input{
+            margin-right:1%;
+
+        }
+        .js-weather{
+            color:white;
+            margin-left:90%;
+            margin-top:150%;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="js-clock">
+        <h1>00:00</h1>
+        <form class="js-form form">
+        <input type="text" placeholder="What is your name?" />
+    </form>
+    <h4 class="js-greetings greetings"></h4>
+    </div>
+</br>
+    <div class="container">
+    <form class="js-toDoForm">
+        <input type="text" placeholder="Write a to do" />
+    </form>
+</div>
+</br>
+    <ul class="js-toDoList">
+    </ul>
+    
+    <span class="js-weather"></span>
+
+    <script src="helloClock.js"></script>
+    <script src="helloName.js"></script>
+    <script src="helloTodo.js"></script>
+    <script src="helloBg.js"></script>
+    <script src="helloWeather.js"></script>
+</body>
+</html>
